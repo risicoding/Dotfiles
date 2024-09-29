@@ -1,5 +1,6 @@
 return {
 	"VonHeikemen/fine-cmdline.nvim",
+	event = "VeryLazy",
 	dependencies = {
 		"MunifTanjim/nui.nvim",
 	},
