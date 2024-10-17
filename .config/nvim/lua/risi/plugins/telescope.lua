@@ -3,7 +3,11 @@ return {
 	branch = "0.1.x",
 	dependencies = {
 		"nvim-lua/plenary.nvim",
-		{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
+		-- { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
+		{
+			"nvim-telescope/telescope-fzf-native.nvim",
+			build = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cd build && make",
+		},
 		"nvim-tree/nvim-web-devicons",
 		"folke/todo-comments.nvim",
 	},
@@ -25,6 +29,7 @@ return {
 		telescope.setup({
 			defaults = {
 				path_display = { "smart" },
+				file_ignore_patterns = { "node_modules" },
 				mappings = {
 					i = {
 						["<C-k>"] = actions.move_selection_previous, -- move to prev result
