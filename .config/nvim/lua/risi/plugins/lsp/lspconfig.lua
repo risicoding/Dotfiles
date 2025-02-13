@@ -23,9 +23,15 @@ return {
 			callback = function(ev)
 				-- Buffer local mappings.
 				-- See `:help vim.lsp.*` for documentation on any of the below functions
+<<<<<<< HEAD
 				local opts = { buffer = ev.buf, silent = false }
 
 				-- set keybiwnds
+=======
+				local opts = { buffer = ev.buf, silent = true }
+
+				-- set keybinds
+>>>>>>> 9aa9637 (feat: rename lspconfig keymaps)
 				opts.desc = "Show LSP references"
 				keymap.set("n", "gR", "<cmd>Telescope lsp_references<CR>", opts) -- show definition, references
 

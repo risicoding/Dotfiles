@@ -45,6 +45,7 @@ return {
 				-- "isort", -- python formatter
 				-- "black", -- python formatter
 				-- "pylint",
+				"eslint",
 				"eslint_d",
 			},
 		})
