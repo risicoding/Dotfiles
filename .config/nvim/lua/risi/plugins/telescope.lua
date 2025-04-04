@@ -37,6 +37,9 @@ return {
 						["<C-q>"] = actions.send_selected_to_qflist + custom_actions.open_trouble_qflist,
 						["<C-t>"] = trouble_telescope.open,
 					},
+					n = {
+						["<Enter>"] = "file_vsplit",
+					},
 				},
 			},
 		})
